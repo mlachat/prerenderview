@@ -13,14 +13,16 @@
 
 		<h2>Welcome to the test app</h2>
 		<h:panelGroup id="panelGroup" layout="block">
-			
+			<p:outputLabel for="testCar" value="Enter a car brand"/><div style="margin-bottom:20px;"/>
 			<p:inputText id="testCar" label="Car Brand" styleClassPanel="grid_2" value="#{testbean.car.brand}">
-				<f:ajax render="register1:carOut"/>
+				<f:ajax event="keyup" render="register1:carOut" execute="@this"/>
 			</p:inputText>
 			
 			<h:outputText value="#{testbean.car.brand}" id="carOut"/>
 			<div id="spacer1" style="margin-bottom:20px;"/>
 			<div id="spacer2" style="margin-bottom:20px;"/>
+			<h:outputText value="#{testbean}"/>
+			<div style="margin-bottom:20px;"/>
 			<h:link value="Link To BMW" outcome="#{navigationBean.bmwLazyPage}"/>
 			<div id="spacer" style="margin-bottom:120px;"/>
 			<h:link value="Home" outcome="#{navigationBean.index}"/>
