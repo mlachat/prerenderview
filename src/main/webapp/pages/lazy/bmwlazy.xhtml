@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ds="http://deltaspike.apache.org/jsf">
+<h:head>
+	<title>BMW Page</title>
+</h:head>
+<h:body>
+	<h:form id="register2">
+	<ds:windowId />
+
+		<h2>Welcome to the test app</h2>
+		<h:panelGroup id="panelGroup" layout="block">
+			
+			<p:inputText id="testCar2" label="Car Brand" styleClassPanel="grid_2" value="#{testbean2.car.brand}"/>
+			
+			<h:outputText value="#{testbean2.car.brand}" id="carOut"/>
+			<div id="spacer1" style="margin-bottom:20px;"/>
+			<div id="spacer2" style="margin-bottom:20px;"/>
+			<h:link value="Link To Audi" outcome="#{navigationBean.audiLazyPage}"/>
+			<div id="spacer" style="margin-bottom:120px;"/>
+			<h:link value="Home" outcome="#{navigationBean.index}"/>
+		</h:panelGroup>
+	</h:form>
+</h:body>
+</html>
