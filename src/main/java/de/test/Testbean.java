@@ -23,7 +23,7 @@ public class Testbean implements Serializable {
 			car.setBrand("Audi");
 		}
 	}
-
+	
 	public Car getCar() {
 		return car;
 	}

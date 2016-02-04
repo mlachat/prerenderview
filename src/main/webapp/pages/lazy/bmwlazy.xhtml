@@ -14,7 +14,9 @@
 		<h2>Welcome to the test app</h2>
 		<h:panelGroup id="panelGroup" layout="block">
 			
-			<p:inputText id="testCar2" label="Car Brand" styleClassPanel="grid_2" value="#{testbean2.car.brand}"/>
+			<p:inputText id="testCar2" label="Car Brand" styleClassPanel="grid_2" value="#{testbean2.car.brand}">
+				<f:ajax render="register2:carOut"/>
+			</p:inputText>
 			
 			<h:outputText value="#{testbean2.car.brand}" id="carOut"/>
 			<div id="spacer1" style="margin-bottom:20px;"/>
